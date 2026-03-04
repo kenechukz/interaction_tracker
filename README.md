@@ -53,6 +53,44 @@ interaction-tracker/
 └── docs/                # Project documentation
 ```
 
+## API Endpoints
+
+### Create Interaction
+
+```text
+POST /api/interactions
+Content-Type: application/json
+
+{
+  "user_id": "user_123",
+  "event_type": "click",
+  "metadata": {"button": "submit"}  // optional
+}
+```
+
+### Get Interactions
+
+```text
+GET /api/interactions
+GET /api/interactions?user_id=user_123
+GET /api/interactions?event_type=click
+GET /api/interactions?user_id=user_123&event_type=click
+```
+
+### Get Statistics
+
+```text
+GET /api/interactions/stats
+
+Returns:
+{
+  "count": 150,
+  "count_by_event_type": [...],
+  "count_by_user": [...],
+  "most_active_user": {"user_id": "user_123", "count": 45}
+}
+```
+
 ## Getting Started
 
 ### Prerequisites
@@ -167,46 +205,6 @@ pytest -v
 
 
 https://github.com/user-attachments/assets/2c2affd2-ec34-4468-b3a3-3d7dcd05be5e
-
-
-
-## API Endpoints
-
-### Create Interaction
-
-```text
-POST /api/interactions
-Content-Type: application/json
-
-{
-  "user_id": "user_123",
-  "event_type": "click",
-  "metadata": {"button": "submit"}  // optional
-}
-```
-
-### Get Interactions
-
-```text
-GET /api/interactions
-GET /api/interactions?user_id=user_123
-GET /api/interactions?event_type=click
-GET /api/interactions?user_id=user_123&event_type=click
-```
-
-### Get Statistics
-
-```text
-GET /api/interactions/stats
-
-Returns:
-{
-  "count": 150,
-  "count_by_event_type": [...],
-  "count_by_user": [...],
-  "most_active_user": {"user_id": "user_123", "count": 45}
-}
-```
 
 ## Development Notes
 
