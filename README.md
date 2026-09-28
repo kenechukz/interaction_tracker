@@ -10,6 +10,10 @@ A full-stack application where you can log user interactions (clicks, page views
 - **Persistent Storage**: PostgreSQL database with Docker volume persistence
 - **API Documentation**: Interactive API docs at `/docs` (Swagger UI)
 
+## Video Demonstration
+
+https://github.com/user-attachments/assets/2c2affd2-ec34-4468-b3a3-3d7dcd05be5e
+
 ## Technologies Used
 
 ### Backend
@@ -200,11 +204,6 @@ For verbose output:
 ```bash
 pytest -v
 ```
-
-## Video Demonstration
-
-
-https://github.com/user-attachments/assets/2c2affd2-ec34-4468-b3a3-3d7dcd05be5e
 
 ## Development Notes
 
